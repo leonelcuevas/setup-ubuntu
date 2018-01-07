@@ -1,0 +1,158 @@
+set nocompatible              " enable  non-'vi-compatible' features
+filetype off                  " required before Vundle
+
+" To set some file type specific settings, you can now use the following: autocmd filetype python set expandtab
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" help for Vundle:
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+" Vundle Plugins to be installed
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'bling/vim-airline'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
+Plugin 'tomtom/tlib_vim'              " Snipmate dependency
+Plugin 'garbas/vim-snipmate'          " Optional for more snippets: honza/vim-snippets
+Plugin 'rodjek/vim-puppet'
+Plugin 'ervandew/supertab'
+call vundle#end()
+
+" After Vundle
+filetype plugin indent on " required after Vundle
+syntax on                 " turn on syntax highlighting
+colorscheme molokai       " colorscheme from: https://github.com/tomasr/molokai 
+let g:mapleader=" "       " set ' ' (space) as leader key
+
+" some settings that I always like to have
+set encoding=utf-8              " basic encoding stuff
+set scrolloff=2                 " have cursor n lines off the end of the terminal when posible
+set autoindent                  " enable autoindent - same as the last line
+set laststatus=2                " show satusline even when theres only one window 
+set cursorline                  " highlight current line
+set ttyfast                     " get a faster terminal connection (not in vi off by default)
+set backspace=indent,eol,start  " make backspace work like most other apps
+set showmatch                   " set show matching parenthesis
+set history=1000                " remember more commands and search history
+set undolevels=1000             " use many muchos levels of undo
+set modelines=0                 " prevent modelines security exploits
+set showmode                    " show mode on status line
+set showcmd                     " show command on status line
+set wildmenu                    " enable command completion with <tab> 
+set wildmode=list:longest       " show list instead of autocompleting commands with wildmenu
+set gdefault                    " applies substitutions on the whole line not only first occurrence
+set wrap                        " no horizontal scroll, text is limited to the width of the screen
+set linebreak                   " wrap without cutting words
+set nolist                      " set list disables linebreak :(
+set textwidth=80                " set wrapping width to n
+set formatoptions=qrn1          " format text more info on: :help fo-table 
+
+" some setting I like to toggle according to my specific needs
+set number                      " show line numbers
+
+" vim 7.3+ only
+set undofile                    " allow undo operation on reload
+" set colorcolumn=80              " color a column, useful to know when text is too long 
+set relativenumber              " show relative line numbers
+
+" tab settings - 2 spaces
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab 
+
+" MAPPINGS
+" map movement to work on 'editor lines' not 'file lines'
+nnoremap j gj
+nnoremap k gk
+nnoremap 0 g0
+nnoremap $ g$
+
+
+" map left  and right arrow keys to move to matching bracket when pressing Alt-key
+nnoremap <A-left> %
+vnoremap <A-left> %
+nnoremap <A-right> %
+vnoremap <A-right> %
+
+" map up and down arrow keys to move lines up and down when pressing Alt-key
+nnoremap <A-up> :m .-2<CR>
+nnoremap <A-down> :m .+1<CR>
+
+" use CTRL-S for saving in all modes
+" silent !stty -ixon                    " First unmap default ctrl-s and ctrl-q mapping as flow control signals
+" autocmd VimLeave * silent !stty ixon  " On exit: restore default behaviour when leaving Vim.
+" actual CTRL-S mapping for saving
+noremap <C-s>	:update<CR>
+vnoremap <C-s>	<C-C>:update<CR>
+inoremap <C-s>	<ESC>:update<CR>
+
+" move between windows
+:nmap <silent> <C-h> :wincmd h<CR>
+:nmap <silent> <C-j> :wincmd j<CR>
+:nmap <silent> <C-k> :wincmd k<CR>
+:nmap <silent> <C-l> :wincmd l<CR>
+
+" enable mouse
+set mouse+=a
+if &term =~ '^screen'
+  set ttymouse=xterm2
+endif
+
+" mappings for edit and source vimrc file quickly
+nmap <silent> <leader>ev :edit $MYVIMRC<CR>
+nmap <silent> <leader>sv :source $MYVIMRC<CR>
+
+" open a new vertical/horizontal split and switch over to it.
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>h <C-w>s<C-w>j
+
+" highlight on search and shotcut to clear it when no longer needed
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader>cl :nohlsearch<cr>
+
+" MiniBuferExplorer settings
+nnoremap <silent> <tab> :MBEbn<CR>
+nnoremap <silent> <s-tab> :MBEbp<CR>
+nnoremap <silent> <c-x> :q<CR>
+nnoremap <silent> <s-x>  :bp<bar>sp<bar>bn<bar>bd<CR>
+autocmd VimEnter * :MBEOpen
+hi MBEVisibleActiveNormal ctermfg=green ctermbg=235
+hi MBEVisibleActiveChanged ctermfg=yellow ctermbg=235
+hi MBEChanged ctermfg=red ctermbg=0
+hi MBEVisibleChanged ctermfg=red ctermbg=235
+hi MBENormal ctermfg=gray ctermbg=0
+hi MBEVisibleNormal ctermfg=lightgray ctermbg=235
+
+" NerdTree settings
+" autocmd vimenter * NERDTree
+map <C-o> :NERDTreeToggle<CR>
+
+
+
+" strip all trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+" format paragraph with given settings
+nnoremap <leader>f gqip
+
+inoremap jj <ESC>
+
+" open a new vertical/horizontal split and switch over to it.
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>h <C-w>s<C-w>j
+
+" use perl python regexp
+" nnoremap / /\v
+" vnoremap / /\v

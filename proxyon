@@ -1,0 +1,5 @@
+export http_proxy="http://www-proxy.us.oracle.com:80"  
+export https_proxy="http://www-proxy.us.oracle.com:80"
+export ftp_proxy="http://www-proxy.us.oracle.com:80"
+export ftps_proxy="http://www-proxy.us.oracle.com:80"
+export rsync_proxy="http://www-proxy.us.oracle.com:80" 

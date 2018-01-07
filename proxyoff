@@ -1,0 +1,5 @@
+export http_proxy=""
+export https_proxy=""
+export ftp_proxy=""
+export ftps_proxy=""
+export rsync_proxy=""
