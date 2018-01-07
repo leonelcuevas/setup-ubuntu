@@ -17,7 +17,7 @@ rm -rf dotfiles
 cd ~
 git clone https://github.com/tomasr/molokai.git
 mkdir .vim/colors
-mv colors/molokai.vim .vim/colors
+mv molokai/colors/molokai.vim .vim/colors
 rm -rf colors
 
 # configure vundle in vim
