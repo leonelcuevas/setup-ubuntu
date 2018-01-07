@@ -9,7 +9,7 @@ In ubuntu:
 ```
 cd ~
 git clone https://github.com/leonelcuevas/setup-ubuntu.git
-cd setup_ubuntu
+cd setup-ubuntu
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -17,5 +17,5 @@ chmod +x setup.sh
 For cleanup:
 ```
 cd ~
-rm -rf setup_ubuntu
+rm -rf setup-ubuntu
 ```
