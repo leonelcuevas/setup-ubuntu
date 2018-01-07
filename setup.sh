@@ -13,6 +13,11 @@ cp dotfiles/tmux.conf ~/.tmux.conf
 cp dotfiles/vimrc ~/.vimrc
 rm -rf dotfiles
 
+# setup a new vim environment
+cd ~
+rm -rf .vim
+mkdir .vim
+
 # install vim color palette
 cd ~
 git clone https://github.com/tomasr/molokai.git
