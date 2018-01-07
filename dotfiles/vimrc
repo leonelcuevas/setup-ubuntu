@@ -64,9 +64,9 @@ set formatoptions=qrn1          " format text more info on: :help fo-table
 set number                      " show line numbers
 
 " vim 7.3+ only
-set undofile                    " allow undo operation on reload
+" set undofile                    " allow undo operation on reload
 " set colorcolumn=80              " color a column, useful to know when text is too long 
-set relativenumber              " show relative line numbers
+" set relativenumber              " show relative line numbers
 
 " tab settings - 2 spaces
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab 
