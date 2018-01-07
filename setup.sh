@@ -13,17 +13,17 @@ cp dotfiles/tmux.conf ~/.tmux.conf
 cp dotfiles/vimrc ~/.vimrc
 rm -rf dotfiles
 
-# configure vundle in vim
-cd ~
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
 # install vim color palette
 cd ~
 git clone https://github.com/tomasr/molokai.git
 mkdir .vim/colors
 mv colors/molokai.vim .vim/colors
 rm -rf colors
+
+# configure vundle in vim
+cd ~
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 
 # things to do ???
