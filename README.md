@@ -1,7 +1,6 @@
 # setup_ubuntu
 
-
-For crouton in host system run: 
+For crouton, in host system run: 
 ```
 mkdir ~/Downloads/shared
 ```
@@ -15,10 +14,8 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-Then open vim and run:
+For cleanup:
 ```
-:PluginUpdate
-:PluginInstall
+cd ~
+rm -rf setup_ubuntu
 ```
-
-
