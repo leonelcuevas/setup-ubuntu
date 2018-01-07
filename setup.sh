@@ -18,7 +18,7 @@ cd ~
 git clone https://github.com/tomasr/molokai.git
 mkdir .vim/colors
 mv molokai/colors/molokai.vim .vim/colors
-rm -rf colors
+rm -rf molokai
 
 # configure vundle in vim
 cd ~
