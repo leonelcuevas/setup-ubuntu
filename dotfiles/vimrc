@@ -42,7 +42,7 @@ set encoding=utf-8              " basic encoding stuff
 set scrolloff=2                 " have cursor n lines off the end of the terminal when posible
 set autoindent                  " enable autoindent - same as the last line
 set laststatus=2                " show satusline even when theres only one window 
-set cursorline                  " highlight current line
+" set cursorline                  " highlight current line
 set ttyfast                     " get a faster terminal connection (not in vi off by default)
 set backspace=indent,eol,start  " make backspace work like most other apps
 set showmatch                   " set show matching parenthesis
