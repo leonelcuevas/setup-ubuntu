@@ -1,10 +1,12 @@
-# for crouton shared files
-cat "~/Downloads/shared ~/shared" > /etc/crouton/shared
-
 # install packages
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install -y tree vim wget
+sudo apt-get install -y tree vim wget tee ssh chromium-browser ruby-full gnome-screenshot
+
+# install gnome terminal 
+sudo apt-get install -y gnome-terminal
+sudo apt-get install -y language-pack-gnome-en language-pack-en
+sudo apt-get install -y locales
 
 # set dotfiles
 cp dotfiles/bash_profile ~/.bash_profile
@@ -30,6 +32,14 @@ cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+#set natural scrolling ubuntu
+gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+
+# for installing sublime text 3 (check version)
+sudo apt-get install -y software-properties-common apt-transport-https
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install -y sublime-text-installer
 
 # things to do ???
 # .proxyoff
