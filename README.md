@@ -2,14 +2,15 @@
 
 For crouton: 
 ```
-sudo sh ~/Downloads/crouton -r xenial -t unity-desktop,xiwi,touch
+sudo sh ~/Downloads/crouton -r xenial -t unity,touch
+# or -> sudo sh ~/Downloads/crouton -r xenial -t unity-desktop,xiwi,touch
 sudo startunity
 ```
 
 In Ubuntu:
 ```
 cd ~
-sudo apt-get -y install git-all 
+sudo apt-get -y install git
 git clone https://github.com/leonelcuevas/setup-ubuntu.git
 cd setup-ubuntu
 chmod +x setup.sh
