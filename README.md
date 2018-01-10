@@ -9,7 +9,7 @@ sudo startunity
 In Ubuntu:
 ```
 cd ~
-sudo apt-get -y install git 
+sudo apt-get -y install git-all 
 git clone https://github.com/leonelcuevas/setup-ubuntu.git
 cd setup-ubuntu
 chmod +x setup.sh
