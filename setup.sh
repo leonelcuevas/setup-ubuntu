@@ -1,11 +1,18 @@
 # install packages
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install -y tree vim wget tee ssh chromium-browser ruby-full gnome-screenshot
+sudo apt-get install -y tree 
+sudo apt-get install -y vim 
+sudo apt-get install -y wget 
+sudo apt-get install -y ssh 
+sudo apt-get install -y chromium-browser 
+sudo apt-get install -y ruby-full 
+sudo apt-get install -y gnome-screenshot
 
 # install gnome terminal 
 sudo apt-get install -y gnome-terminal
-sudo apt-get install -y language-pack-gnome-en language-pack-en
+sudo apt-get install -y language-pack-gnome-en 
+sudo apt-get install -y language-pack-en
 sudo apt-get install -y locales
 
 # set dotfiles
@@ -13,7 +20,6 @@ cp dotfiles/bash_profile ~/.bash_profile
 cp dotfiles/bashrc ~/.bashrc
 cp dotfiles/tmux.conf ~/.tmux.conf
 cp dotfiles/vimrc ~/.vimrc
-rm -rf dotfiles
 
 # setup a new vim environment
 cd ~
@@ -37,7 +43,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 
 # for installing sublime text 3 (check version)
 sudo apt-get install -y software-properties-common apt-transport-https
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get install -y sublime-text-installer
 
