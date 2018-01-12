@@ -32,10 +32,12 @@ Plugin 'ervandew/supertab'
 call vundle#end()
 
 " After Vundle
-filetype plugin indent on " required after Vundle
-syntax on                 " turn on syntax highlighting
-colorscheme molokai       " colorscheme from: https://github.com/tomasr/molokai 
-let g:mapleader=" "       " set ' ' (space) as leader key
+syntax on             " Enable syntax highlighting
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+colorscheme molokai   " colorscheme from: https://github.com/tomasr/molokai 
+let g:mapleader=" "   " set ' ' (space) as leader key
 
 " some settings that I always like to have
 set encoding=utf-8              " basic encoding stuff
