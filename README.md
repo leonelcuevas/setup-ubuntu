@@ -17,10 +17,10 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-Cleanup and system restart to apply changes:
+Cleanup and locale configuration for gnome terminal:
 ```
 cd ~
 rm -rf setup-ubuntu
 sudo dpkg-reconfigure locales
 ```
-In the dpkg-reconfigure screen, hit enter at the first prompt and select "en_US.UTF-8" as the default for the second prompt. Finally restart the chroot (log out and log in again).
+In the dpkg-reconfigure screen, hit enter at the first prompt and select "en_US.UTF-8" as the default for the second prompt. Finally restart the chroot (log out and log in again) to apply all changes.
