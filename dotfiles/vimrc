@@ -32,6 +32,7 @@ Plugin 'honza/vim-snippets'           " precreated snippets for snipmate
 Plugin 'ervandew/supertab'            " allow basic tab completion
 Plugin 'jiangmiao/auto-pairs'          " insert pairs of (), [], quotes, etcv.
 Plugin 'ctrlpvim/ctrlp.vim'           " CTRL-P for Fuzzy search
+Plugin 'tpope/vim-endwise'            " auto close open code blocks, if-end, do-end, {}, etc.
 call vundle#end()
 
 " After Vundle
