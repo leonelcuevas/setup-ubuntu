@@ -14,21 +14,24 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " Vundle Plugins to be installed
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'bling/vim-airline'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
-Plugin 'tomtom/tlib_vim'              " Snipmate dependency
-Plugin 'garbas/vim-snipmate'          " Optional for more snippets: honza/vim-snippets
-Plugin 'rodjek/vim-puppet'
-Plugin 'ervandew/supertab'
+Plugin 'gmarik/Vundle.vim'            " to use Vundle
+Plugin 'scrooloose/nerdtree'          " CTRL-O to open file tree 
+Plugin 'scrooloose/nerdcommenter'     " auto comment using leader-c-leader
+Plugin 'scrooloose/syntastic'         " syntax checking on save
+Plugin 'tpope/vim-surround'           " change/delete pairs of [], (), quotes, etc.
+Plugin 'tpope/vim-repeat'             " enable repeat for plugin commands using . command
+Plugin 'Lokaltog/vim-easymotion'      
+Plugin 'bling/vim-airline'            " show status bar at the bottom
+Plugin 'fholgado/minibufexpl.vim'     " allow vim to have tabs
+Plugin 'kien/rainbow_parentheses.vim' " makes easier to visualize nested parenthesis
+Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate dependency
+Plugin 'tomtom/tlib_vim'              " snipmate dependency
+Plugin 'garbas/vim-snipmate'          " allows to tab complete for, if, def, etc.
+Plugin 'honza/vim-snippets'           " precreated snippets for snipmate
+" Plugin 'rodjek/vim-puppet'            " puppet sintx highlighting and ident 
+Plugin 'ervandew/supertab'            " allow basic tab completion
+Plugin 'jiangmiao/auto-pairs'          " insert pairs of (), [], quotes, etcv.
+Plugin 'ctrlpvim/ctrlp.vim'           " CTRL-P for Fuzzy search
 call vundle#end()
 
 " After Vundle
@@ -143,7 +146,6 @@ hi MBEVisibleNormal ctermfg=lightgray ctermbg=235
 map <C-o> :NERDTreeToggle<CR>
 
 
-
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " format paragraph with given settings
@@ -158,3 +160,16 @@ nnoremap <leader>h <C-w>s<C-w>j
 " use perl python regexp
 " nnoremap / /\v
 " vnoremap / /\v
+
+" function to remove trailing whistspace and preserve cursor position
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+" or only for needed file extensions
+" autocmd BufWritePre *.c,*.rb,*.py :call <SID>StripTrailingWhitespaces()
+
