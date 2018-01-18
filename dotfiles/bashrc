@@ -1,24 +1,18 @@
-#!/bin/bash                                                                 
+#!/bin/bash
 
-# prompt with format: [usr@host pwd] 
+# prompt with format: [usr@host pwd]
 PS1="[\[\033[32m\]\u\[\033[1;34m\]@\h \[\033[0;37m\]\w]\$ \[\033[0m\]"
 
 # disable ctrl+S and ctrl+Q
 stty -ixon
 
-# set tmux enviroment stuff 
+# set enviroment stuff
 export NLS_LANG="American_America.UTF8"
-export LD_LIBRARY_PATH="$HOME/bin/libevent/lib:${LD_LIBRARY_PATH}"
-export PATH="$HOME/bin/tmux/bin:/usr/bin:${PATH}"
 
-export LD_LIBRARY_PATH=${HOME}/bin/libevent/lib/:${LD_LIBRARY_PATH}
-export PATH=${HOME}/bin/tmux/bin:${PATH} 
-export MANPATH=${HOME}/bin/tmux/share/man:${MANPATH} 
-
-# Homebrew software in url local bin takes priority
+# software in url local bin takes priority
 export PATH=/usr/local/bin:$PATH
 
-# to work with 256 colors 
+# to work with 256 colors
 export TERM="xterm-256color"
 
 # colors for ls

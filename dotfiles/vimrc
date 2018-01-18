@@ -15,12 +15,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Vundle Plugins to be installed
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'            " to use Vundle
-Plugin 'scrooloose/nerdtree'          " CTRL-O to open file tree 
+Plugin 'scrooloose/nerdtree'          " CTRL-O to open file tree
 Plugin 'scrooloose/nerdcommenter'     " auto comment using leader-c-leader
 Plugin 'scrooloose/syntastic'         " syntax checking on save
 Plugin 'tpope/vim-surround'           " change/delete pairs of [], (), quotes, etc.
 Plugin 'tpope/vim-repeat'             " enable repeat for plugin commands using . command
-Plugin 'Lokaltog/vim-easymotion'      
 Plugin 'bling/vim-airline'            " show status bar at the bottom
 Plugin 'fholgado/minibufexpl.vim'     " allow vim to have tabs
 Plugin 'kien/rainbow_parentheses.vim' " makes easier to visualize nested parenthesis
@@ -28,7 +27,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate dependency
 Plugin 'tomtom/tlib_vim'              " snipmate dependency
 Plugin 'garbas/vim-snipmate'          " allows to tab complete for, if, def, etc.
 Plugin 'honza/vim-snippets'           " precreated snippets for snipmate
-" Plugin 'rodjek/vim-puppet'            " puppet sintx highlighting and ident 
+" Plugin 'rodjek/vim-puppet'            " puppet sintx highlighting and ident
 Plugin 'ervandew/supertab'            " allow basic tab completion
 Plugin 'jiangmiao/auto-pairs'          " insert pairs of (), [], quotes, etcv.
 Plugin 'ctrlpvim/ctrlp.vim'           " CTRL-P for Fuzzy search
@@ -40,14 +39,14 @@ syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-colorscheme molokai   " colorscheme from: https://github.com/tomasr/molokai 
+colorscheme molokai   " colorscheme from: https://github.com/tomasr/molokai
 let g:mapleader=" "   " set ' ' (space) as leader key
 
 " some settings that I always like to have
 set encoding=utf-8              " basic encoding stuff
 set scrolloff=2                 " have cursor n lines off the end of the terminal when posible
 set autoindent                  " enable autoindent - same as the last line
-set laststatus=2                " show satusline even when theres only one window 
+set laststatus=2                " show satusline even when theres only one window
 " set cursorline                  " highlight current line
 set ttyfast                     " get a faster terminal connection (not in vi off by default)
 set backspace=indent,eol,start  " make backspace work like most other apps
@@ -57,25 +56,25 @@ set undolevels=1000             " use many muchos levels of undo
 set modelines=0                 " prevent modelines security exploits
 set showmode                    " show mode on status line
 set showcmd                     " show command on status line
-set wildmenu                    " enable command completion with <tab> 
+set wildmenu                    " enable command completion with <tab>
 set wildmode=list:longest       " show list instead of autocompleting commands with wildmenu
 set gdefault                    " applies substitutions on the whole line not only first occurrence
 set wrap                        " no horizontal scroll, text is limited to the width of the screen
 set linebreak                   " wrap without cutting words
 set nolist                      " set list disables linebreak :(
 set textwidth=80                " set wrapping width to n
-set formatoptions=qrn1          " format text more info on: :help fo-table 
+set formatoptions=qrn1          " format text more info on: :help fo-table
 
 " some setting I like to toggle according to my specific needs
 set number                      " show line numbers
 
 " vim 7.3+ only
 " set undofile                    " allow undo operation on reload
-" set colorcolumn=80              " color a column, useful to know when text is too long 
+" set colorcolumn=80              " color a column, useful to know when text is too long
 " set relativenumber              " show relative line numbers
 
 " tab settings - 2 spaces
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab 
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " MAPPINGS
 " map movement to work on 'editor lines' not 'file lines'

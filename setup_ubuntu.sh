@@ -1,27 +1,30 @@
+#!/usr/bin/env bash
+
 # install packages
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install -y bash 
-sudo apt-get install -y tree 
-sudo apt-get install -y vim 
+sudo apt-get install -y bash
+sudo apt-get install -y tree
+sudo apt-get install -y vim
 sudo apt-get install -y wget
-sudo apt-get install -y curl 
-sudo apt-get install -y grep 
-sudo apt-get install -y sed 
-sudo apt-get install -y zip 
-sudo apt-get install -y unzip 
-sudo apt-get install -y gzip 
-sudo apt-get install -y tar 
-sudo apt-get install -y gawk 
-sudo apt-get install -y ssh 
-sudo apt-get install -y chromium-browser 
-sudo apt-get install -y ruby-full 
-sudo apt-get install -y gem 
+sudo apt-get install -y curl
+sudo apt-get install -y grep
+sudo apt-get install -y sed
+sudo apt-get install -y zip
+sudo apt-get install -y unzip
+sudo apt-get install -y gzip
+sudo apt-get install -y tar
+sudo apt-get install -y gawk
+sudo apt-get install -y ssh
+sudo apt-get install -y xclip
+sudo apt-get install -y chromium-browser
+sudo apt-get install -y ruby-full
+sudo apt-get install -y gem
 sudo apt-get install -y gnome-screenshot
 
-# install gnome terminal 
+# install gnome terminal
 sudo apt-get install -y gnome-terminal
-sudo apt-get install -y language-pack-gnome-en 
+sudo apt-get install -y language-pack-gnome-en
 sudo apt-get install -y language-pack-en
 sudo apt-get install -y locales
 
