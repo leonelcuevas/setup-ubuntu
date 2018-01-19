@@ -1,4 +1,7 @@
 # setup ssh GitHub
+git config --global user.email "leonel.cvs@gmail.com"
+git config --global user.name "Leonel Cuevas Valeriano"
+
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 4096 -C "leonelcuevas_git" # set passphrase on prompt
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
