@@ -65,6 +65,7 @@ You can test the connection by running:
 ssh -T git@github.com
 ```
 
+## Cleanup
 Clean up the directory
 ```
 cd ~
