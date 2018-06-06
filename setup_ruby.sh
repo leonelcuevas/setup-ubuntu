@@ -14,6 +14,7 @@ rvm gemset use global
 gem update --system
 gem update
 gem install bundler # for .gemfile support
+gem install pry # for a better, colored shell with autocomplete
 
 
 # install ruby on rails
