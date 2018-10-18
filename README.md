@@ -8,6 +8,12 @@ sudo sh ~/Downloads/crouton -r xenial -t unity,touch
 sudo startunity
 ```
 
+Remove a chroot:
+```
+sudo edit-chroot -a # to list chroot names
+sudo delete-chroot <name>
+```
+
 ## Packages, dotfiles, configs, terminal and Sublime Text
 In Ubuntu:
 ```
