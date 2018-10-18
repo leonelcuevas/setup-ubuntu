@@ -1,14 +1,16 @@
 # Setup Ubuntu Development Environment 
 
 ## Crouton
+
 For crouton: 
+Download latest version from https://github.com/dnschneid/crouton. Then:
 ```
 sudo sh ~/Downloads/crouton -r xenial -t unity,touch
 # or -> sudo sh ~/Downloads/crouton -r xenial -t unity-desktop,xiwi,touch
 sudo startunity
 ```
 
-Remove a chroot:
+In case of need, remove a previous chroot:
 ```
 sudo edit-chroot -a # to list chroot names
 sudo delete-chroot <name>
