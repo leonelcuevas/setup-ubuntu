@@ -40,7 +40,7 @@ In the dpkg-reconfigure screen, hit enter at the first prompt and select "en_US.
 Optionally download and setup tmux by running (you will be asked for your root password at the beginning):
 ```
 cd ~/setup-ubuntu
-./setup_tumux.sh
+./setup_tmux.sh
 ```
 
 ## Ruby, RVM, Rails, Gosu
