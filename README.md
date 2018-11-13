@@ -6,7 +6,10 @@ For crouton:
 Download latest version from https://github.com/dnschneid/crouton. Then:
 ```
 sudo sh ~/Downloads/crouton -r xenial -t unity,touch
+# or -> sudo sh ~/Downloads/crouton -r xenial -t gnome,touch
 # or -> sudo sh ~/Downloads/crouton -r xenial -t unity-desktop,xiwi,touch
+# To see all the installation options use: 
+#     sudo sh ~/Downloads/crouton -t list  
 sudo startunity
 ```
 
