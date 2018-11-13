@@ -10,7 +10,8 @@ sudo sh ~/Downloads/crouton -r xenial -t unity,touch
 # or -> sudo sh ~/Downloads/crouton -r xenial -t unity-desktop,xiwi,touch
 # To see all the installation options use: 
 #     sudo sh ~/Downloads/crouton -t list  
-sudo startunity
+sudo startunity # to start the chroot
+# if you installed gnome or other environment use the appropiate command
 ```
 
 In case of need, remove a previous chroot:
