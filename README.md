@@ -5,8 +5,8 @@
 For crouton: 
 Download latest version from https://github.com/dnschneid/crouton. Then:
 ```
-sudo sh ~/Downloads/crouton -r xenial -t unity,touch
-# or -> sudo sh ~/Downloads/crouton -r xenial -t gnome,touch
+sudo sh ~/Downloads/crouton -r xenial -t gnome,touch
+# or -> sudo sh ~/Downloads/crouton -r xenial -t unity,touch
 # or -> sudo sh ~/Downloads/crouton -r xenial -t unity-desktop,xiwi,touch
 ```
 
@@ -17,8 +17,9 @@ sudo sh ~/Downloads/crouton -t list
 
 To start the chroot:
 ```
+sudo startgnome
+# if you installed unity or other environment use the appropiate command. For example:
 sudo startunity 
-# if you installed gnome or other environment use the appropiate command
 ```
 
 In case of need, remove a previous chroot:
