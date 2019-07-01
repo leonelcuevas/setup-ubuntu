@@ -27,7 +27,7 @@ sudo edit-chroot -a # to list chroot names
 sudo delete-chroot <name>
 ```
 
-## Packages, dotfiles, configs, terminal and Sublime Text
+## Packages, dotfiles, configs and terminal
 In Ubuntu:
 ```
 cd ~
@@ -45,6 +45,23 @@ cd ~
 sudo dpkg-reconfigure locales
 ```
 In the dpkg-reconfigure screen, hit enter at the first prompt and select "en_US.UTF-8" as the default for the second prompt. At this point restart the chroot (log out and log in again) to apply all changes.
+
+## Text Editor
+Install the text editor of your choice. Included are scripts to install Visual Studio Code and Sublime Text.
+
+### Visual Studio Code
+To install Visual Studio Code run:
+```
+cd ~/setup-ubuntu
+./setup_vscode.sh
+```
+
+### Sublime Text
+To install Sublime Text run:
+```
+cd ~/setup-ubuntu
+./setup_sublime.sh
+```
 
 
 ## Tmux
