@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # prompt with format: [usr@host pwd]
-PS1="[\[\033[32m\]\u\[\033[1;34m\]@\h \[\033[0;37m\]\w]\$ \[\033[0m\]"
+# PS1="[\[\033[32m\]\u\[\033[1;34m\]@\h \[\033[0;37m\]\w]\$ \[\033[0m\]"
+
+git_branch() {
+    git branch 2>/dev/null | grep '^*' | colrm 1 2
+}
+# prompt with format: [time usr@host pwd on git_branch]
+PS1="\n[ \[\033[95m\]\t \[\033[1;32m\]\u\[\033[1;34m\]@\h \[\033[0;37m\]\w \[\033[1;34m\]on \[\033[0;91m\]\$(git_branch)\[\033[0;37m\] ]\n\$ \[\033[0m\]"
 
 # disable ctrl+S and ctrl+Q
 stty -ixon
