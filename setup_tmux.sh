@@ -8,6 +8,8 @@ sudo apt-get -y install build-essential
 sudo apt-get -y install pkg-config
 sudo apt-get -y install libevent-dev
 sudo apt-get -y install libncurses5-dev
+sudo apt-get -y install bison
+sudo apt-get -y install byacc
 
 rm -rf /tmp/tmux
 git clone https://github.com/tmux/tmux.git /tmp/tmux
