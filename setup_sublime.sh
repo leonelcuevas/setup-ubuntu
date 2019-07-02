@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo -e "\e[1;31mInstalling Sublime Text\e[0m"
+
 # installs sublime text 3 (check version)
 sudo apt-get -y update
 sudo apt-get -y upgrade

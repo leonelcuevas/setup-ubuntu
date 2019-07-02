@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # setup ssh GitHub
+echo -e "\e[1;31mConfiguring Github SSH\e[0m"
 git config --global user.email "leonel.cvs@gmail.com"
 git config --global user.name "Leonel Cuevas Valeriano"
 

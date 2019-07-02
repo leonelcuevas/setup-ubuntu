@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo -e "\e[1;31mConfiguring tmux environment\e[0m"
+
 sudo apt-get -y update
 sudo apt-get -y install automake
 sudo apt-get -y install build-essential

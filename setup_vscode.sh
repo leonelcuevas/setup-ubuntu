@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo -e "\e[1;31mInstalling Visual Studio Code\e[0m"
+
 # installs visual studio code
 sudo apt-get -y update
 sudo apt-get -y upgrade
