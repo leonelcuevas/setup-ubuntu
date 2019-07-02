@@ -2,10 +2,11 @@
 
 echo -e "\e[1;31mBeginning setup\e[0m"
 
-# install packages
-echo -e "\e[1;31mInstalling base packages\e[0m"
 sudo apt-get -y update
 sudo apt-get -y upgrade
+
+# install packages
+echo -e "\e[1;31mInstalling base packages\e[0m"
 sudo apt-get -y install bash
 sudo apt-get -y install tree
 sudo apt-get -y install vim
